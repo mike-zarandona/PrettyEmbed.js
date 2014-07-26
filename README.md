@@ -65,33 +65,17 @@ Call the plugin on the placeholder element:
 
 
 ## Options
-
-**videoID** &nbsp; | &nbsp; The video ID of the YouTube video.  This option will be ignored if the `data-videoid` attribute is present.  (E.g.: *aBcDeFg12345*)
-
-**previewSize** &nbsp; | &nbsp; Preview image size pulled from YouTube.  This option will be ignored if the `customPreviewImage` attribute is present.  Available sizes from smallest to largest:
-
-- `thumb-default`
-- `thumb-1`
-- `thumb-2`
-- `thumb-3`
-- `default`
-- `medium`
-- `high`
-- **`hd`** *(default)*
-
-**customPreviewImage** &nbsp; | &nbsp; Custom defined preview image URL. This option overrides `options.previewSize`.
-
-**showInfo** &nbsp; | &nbsp; Display video information (top bar).
-
-**showControls** &nbsp; | &nbsp; Display YouTube player controls.
-
-**loop** &nbsp; | &nbsp; Play video as a loop.
-
-**colorScheme** &nbsp; | &nbsp; Display YouTube player user interface.
-
-**showRelated** &nbsp; | &nbsp; Display YouTube related videos on video end.
-
-**useFitVids** &nbsp; | &nbsp; Call FitVids.js on `.pretty-embed` instances once the video(s) is/are loaded.
+Name                   | Description
+----                   | -----------
+**videoID**            | The video ID of the YouTube video.  This option will be ignored if the `data-videoid` attribute is present.  (E.g.: *aBcDeFg12345*)
+**previewSize**        | Preview image size pulled from YouTube.  This option will be ignored if the `customPreviewImage` attribute is present.  Available sizes from smallest to largest: `thumb-default`, `thumb-1`, `thumb-2`, `thumb-3`, `default`, `medium`, `high`, `hd` *(default)*
+**customPreviewImage** |  Custom defined preview image URL. This option overrides `options.previewSize`.
+**showInfo**           | Display video information (top bar).
+**showControls**       | Display YouTube player controls.
+**loop**               | Play video as a loop.
+**colorScheme**        | Display YouTube player user interface.
+**showRelated**        | Display YouTube related videos on video end.
+**useFitVids**         | Call FitVids.js on `.pretty-embed` instances once the video(s) is/are loaded.
 
 
 
