@@ -65,21 +65,30 @@ Call the plugin on the placeholder element:
 
 
 ## Options
-Name                   | Description
-----                   | -----------
-**videoID**            | The video ID of the YouTube video.  This option will be ignored if the `data-videoid` attribute is present.  (E.g.: *aBcDeFg12345*)
-**previewSize**        | Preview image size pulled from YouTube.  This option will be ignored if the `customPreviewImage` attribute is present.  Available sizes from smallest to largest: `thumb-default`, `thumb-1`, `thumb-2`, `thumb-3`, `default`, `medium`, `high`, `hd` *(default)*
-**customPreviewImage** |  Custom defined preview image URL. This option overrides `options.previewSize`.
-**showInfo**           | Display video information (top bar).
-**showControls**       | Display YouTube player controls.
-**loop**               | Play video as a loop.
-**colorScheme**        | Display YouTube player user interface.
-**showRelated**        | Display YouTube related videos on video end.
-**useFitVids**         | Call FitVids.js on `.pretty-embed` instances once the video(s) is/are loaded.
+Name					| Description
+----					| -----------
+**videoID**				| The video ID of the YouTube video.  This option will be ignored if the `data-videoid` attribute is present.  (E.g.: *aBcDeFg12345*)
+**previewSize**			| Preview image size pulled from YouTube.  This option will be ignored if the `customPreviewImage` attribute is present.  Available sizes from smallest to largest: `thumb-default`, `thumb-1`, `thumb-2`, `thumb-3`, `default`, `medium`, `high`, `hd` *(default)*
+**customPreviewImage**	|  Custom defined preview image URL. This option overrides `options.previewSize`.
+**showInfo**			| Display video information (top bar).
+**showControls**		| Display YouTube player controls.
+**loop**				| Play video as a loop.
+**closedCaptions**		| Displays closed captions (if available).
+**localization**		| Changes the localization.  Accepts an [ISO 639-1 two-letter language code](http://www.loc.gov/standards/iso639-2/php/code_list.php).
+**colorScheme**			| Display YouTube player user interface.
+**showRelated**			| Display YouTube related videos on video end.
+**useFitVids**			| Call FitVids.js on `.pretty-embed` instances once the video(s) is/are loaded.
 
 
 
 ## Changelog
+
+### v1.2.0
+- Fixed those annoying "black bars" that would show up on the sides of the video once playing
+- Fixed an issue which would cause HTML5 `data-pe-` attributes to break
+- Removed the background-color from `.pretty-embed`, because be more flexible, ya know?
+- New option: `closedCaptions` to turn on closed captions (if available)
+- New option: `localization` which accepts an [ISO 639-1 two-letter language code](http://www.loc.gov/standards/iso639-2/php/code_list.php)
 
 ### v1.1.0
 - Better multiple instance handling
@@ -96,7 +105,7 @@ Name                   | Description
 
 
 ## Thanks
-Thanks to the contributors and suggestions from around the web ([@k-risc](https://github.com/k-risc))
+Thanks to the contributors and suggestions from around the web
 
 Thanks to alexanderdickson for [waitForImages](https://github.com/alexanderdickson/waitForImages), which this plugin leverages for dynamic image previews.
 
