@@ -2,9 +2,9 @@
 **********************************************************
 * prettyEmbed.js | https://github.com/mike-zarandona/prettyembed.js
 * 
-* Version:		v1.2.0
+* Version:		v1.2.1
 * Author:		Mike Zarandona
-* Release:		July 30 2014
+* Release:		July 31 2014
 * 
 * Reqs:			jQuery  |  http://jquery.com
 * 				waitForImages  |  https://github.com/alexanderdickson/waitForImages
@@ -75,7 +75,9 @@
 				thisClosedCaptions,
 				thisLocalization,
 				thisColorScheme,
-				thisShowRelated;
+				thisShowRelated,
+				thisAllowFullScreen,
+				fullScreenFlag;
 
 			// videoID
 			if ( $(this).attr('data-pe-videoid') !== undefined ) { thisVideoID = $(this).attr('data-pe-videoid'); }
@@ -127,6 +129,11 @@
 			else if ( options.showRelated !== undefined ) { thisShowRelated = options.showRelated; }
 			else { thisShowRelated = undefined; }
 
+			// allow full screen
+			if ( $(this).attr('data-pe-allow-fullscreen') !== undefined ) { thisAllowFullScreen = $(this).attr('data-pe-allow-fullscreen'); }
+			else if ( options.allowFullScreen !== undefined ) { thisAllowFullScreen = options.allowFullScreen; }
+			else { thisAllowFullScreen = undefined; }
+
 
 			// If this element is an <a/>, create a placeholder replacement
 			if ( $(this).is('a') ) {
@@ -144,7 +151,8 @@
 							  .attr('data-pe-closed-captions', thisClosedCaptions)
 							  .attr('data-pe-localization', thisLocalization)
 							  .attr('data-pe-color-scheme', thisColorScheme)
-							  .attr('data-pe-show-related', thisShowRelated);
+							  .attr('data-pe-show-related', thisShowRelated)
+							  .attr('data-pe-allow-fullscreen', thisAllowFullScreen);
 
 				// append the new element, and remove the <a/>
 				$(this).after($newDOMElement);
@@ -195,8 +203,8 @@
 
 			// if mobile, go straight to iframe
 			if (mobile) {
-				$(this).waitForImages(function() {
-					clickEventRunner( $(this) );
+				$(window).on('load', function() {
+					$('.pretty-embed').trigger('click');
 				});
 			}
 		});
@@ -261,8 +269,11 @@
 			// showRelated
 			if ( (obj.attr('data-pe-show-related') === 'false') || (options.showRelated === false) ) { playerOptions += '&rel=0'; } else { playerOptions += '&rel=1'; }
 
+			// allow full screen
+			if ( (obj.attr('data-pe-allow-fullscreen') === 'false') || (options.allowFullScreen === false) ) { fullScreenFlag = ''; } else { fullScreenFlag = 'allowfullscreen '; }
+
 			// Write the YouTube video iFrame into the element at the exact dimensions it is now
-			obj.html('<iframe width="' + wrapperWidth + '" height="' + wrapperHeight + '" style="border:none;" src="//www.youtube.com/embed/' + thisVideoID + '?autoplay=1' + playerOptions + '"></iframe>')
+			obj.html('<iframe width="' + wrapperWidth + '" height="' + wrapperHeight + '" ' + fullScreenFlag + 'style="border:none;" src="//www.youtube.com/embed/' + thisVideoID + '?autoplay=1' + playerOptions + '"></iframe>')
 				// Remove the YouTube 'play' button using a CSS class
 				.addClass('play');
 

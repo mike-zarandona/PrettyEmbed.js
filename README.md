@@ -77,11 +77,16 @@ Name					| Description
 **localization**		| Changes the localization.  Accepts an [ISO 639-1 two-letter language code](http://www.loc.gov/standards/iso639-2/php/code_list.php).
 **colorScheme**			| Display YouTube player user interface.
 **showRelated**			| Display YouTube related videos on video end.
+**allowFullScreen**		| Defaults to `true`, can be set to `false` to disable the viewer from viewing in fullscreen mode.
 **useFitVids**			| Call FitVids.js on `.pretty-embed` instances once the video(s) is/are loaded.
 
 
 
 ## Changelog
+
+### v1.2.1
+- Fixed mobile player bug
+- New option: `allowFullScreen` which can be used to turn off fullscreen viewing mode
 
 ### v1.2.0
 - Fixed those annoying "black bars" that would show up on the sides of the video once playing
