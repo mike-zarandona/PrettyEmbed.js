@@ -56,7 +56,7 @@ Call the plugin on the placeholder element:
 		showRelated: false,
 
 		useFitVids: true
-	)};
+	});
 
 **Note** that html5 `data-pe-` attributes will take precedence over the options called programmatically.  E.g. `data-pe-videoid="aBcDeFg1234"` takes precedence over `options.videoID: '1234GfEdCbA'`.
 
