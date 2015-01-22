@@ -1,0 +1,19 @@
+{
+  "name": "pretty-embed",
+  "description": "Prettier embeds for your YouTubes - with nice options like high-res preview images, advanced customization of embed options, and optional FitVids support.",
+  "main": "jquery.prettyembed.js",
+  "keywords": [
+    "youtube",
+    "video",
+    "embeds"
+  ],
+  "authors": [{
+    "name": "Mike Zarandona",
+    "email": "mike.zarandona@gmail.com",
+    "homepage": "http://mikezarandona.com"
+  }],
+  "dependencies": {
+    "jquery": "~2.1",
+    "waitForImages": "~2.0.0"
+  }
+}
