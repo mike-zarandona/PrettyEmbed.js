@@ -9,8 +9,8 @@
   ],
   "authors": [{
     "name": "Mike Zarandona",
-    "email": "mike.zarandona@gmail.com",
-    "homepage": "http://mikezarandona.com"
+    "email": "mike@zarandona.com",
+    "homepage": "http://mike.zarandona.com"
   }],
   "dependencies": {
     "jquery": "~2.1",

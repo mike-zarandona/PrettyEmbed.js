@@ -110,14 +110,16 @@ Name					| Description
 
 
 ## Thanks
-Thanks to the contributors and suggestions from around the web
+Thanks to the contributors and suggestions from around the web.
 
 Thanks to alexanderdickson for [waitForImages](https://github.com/alexanderdickson/waitForImages), which this plugin leverages for dynamic image previews.
 
 
 
+
+
 ## Author
-[Mike Zarandona](http://mikezarandona.com "mikezarandona.com") | [@mikezarandona](http://twitter.com/mikezarandona "@mikezarandona")
+[Mike Zarandona](http://mike.zarandona.com) | [@mikezarandona](http://twitter.com/mikezarandona)
 
 
-![PrettyEmbed.js](http://mikezarandona.com/wp-content/uploads/2014/06/prettyembed-300x300.jpg)
+![PrettyEmbed.js](http://i.imgur.com/Jne5lN3.jpg)
